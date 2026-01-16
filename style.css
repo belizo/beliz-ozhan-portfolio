@@ -64,6 +64,27 @@ h2 {
   color: var(--primary-dark);
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.skills-grid h4 {
+  margin-bottom: 0.75rem;
+  color: var(--primary-dark);
+}
+
+.skills-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-grid li {
+  margin-bottom: 0.45rem;
+}
+
+
 .contact-links a {
   color: var(--primary-dark);
   text-decoration: none;
