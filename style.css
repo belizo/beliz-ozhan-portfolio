@@ -7,15 +7,10 @@
   --border: #e5e7eb;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
-  background: #ffffff;
   line-height: 1.75;
 }
 
@@ -31,25 +26,11 @@ header {
   text-align: center;
 }
 
-.subtitle {
-  margin-top: 0.75rem;
-  font-size: 1.05rem;
-  opacity: 0.95;
-}
-
-nav {
-  margin-top: 1.75rem;
-}
-
 nav a {
   color: white;
-  text-decoration: none;
   margin: 0 0.8rem;
+  text-decoration: none;
   font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 main {
@@ -58,13 +39,7 @@ main {
   padding: 3rem 1.5rem;
 }
 
-section {
-  margin-bottom: 4.5rem;
-}
-
 h2 {
-  font-size: 1.45rem;
-  margin-bottom: 1.5rem;
   border-bottom: 2px solid var(--primary-light);
   padding-bottom: 0.4rem;
 }
@@ -73,43 +48,20 @@ h2 {
   background: white;
   border: 1px solid var(--border);
   border-left: 5px solid var(--primary);
-  padding: 1.75rem;
+  padding: 2rem;
   border-radius: 16px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .project h3 {
   margin-top: 0;
 }
 
-.meta {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-
-.skills-grid h4 {
-  margin-bottom: 0.75rem;
+.project h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
   color: var(--primary-dark);
-}
-
-.skills-grid ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills-grid li {
-  margin-bottom: 0.45rem;
-}
-
-.contact-links {
-  font-size: 1.05rem;
 }
 
 .contact-links a {
@@ -118,14 +70,9 @@ h2 {
   font-weight: 500;
 }
 
-.contact-links a:hover {
-  text-decoration: underline;
-}
-
 footer {
   border-top: 1px solid var(--border);
   text-align: center;
   padding: 2rem;
-  font-size: 0.9rem;
   color: var(--muted);
 }
