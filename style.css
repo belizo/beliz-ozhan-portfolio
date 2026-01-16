@@ -1,8 +1,10 @@
 :root {
-  --purple: #b79cff;
-  --purple-light: #f3eeff;
-  --text: #222;
-  --muted: #666;
+  --primary: #a78bfa;
+  --primary-light: #f4f1ff;
+  --primary-dark: #6d5bd0;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
 }
 
 * {
@@ -12,32 +14,38 @@
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
-  background: #ffffff;
   color: var(--text);
-  line-height: 1.7;
+  background: #ffffff;
+  line-height: 1.75;
 }
 
 header {
-  background: linear-gradient(135deg, var(--purple), #d6c9ff);
+  background: linear-gradient(135deg, var(--primary), #c7b8ff);
   color: white;
-  text-align: center;
-  padding: 3rem 1rem;
 }
 
-header h1 {
-  margin: 0;
-  font-weight: 600;
+.header-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  opacity: 0.95;
 }
 
 nav {
-  margin-top: 1rem;
+  margin-top: 1.75rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 0.75rem;
-  font-weight: 400;
+  margin: 0 0.8rem;
+  font-weight: 500;
 }
 
 nav a:hover {
@@ -45,36 +53,50 @@ nav a:hover {
 }
 
 main {
-  max-width: 950px;
+  max-width: 900px;
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem;
 }
 
 section {
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 }
 
 h2 {
-  border-bottom: 3px solid var(--purple-light);
-  padding-bottom: 0.5rem;
+  font-size: 1.45rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 0.4rem;
 }
 
 .project {
-  background: var(--purple-light);
-  padding: 1.25rem;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--primary);
+  padding: 1.75rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.project h3 {
+  margin-top: 0;
 }
 
 .meta {
+  margin-top: 0.75rem;
   font-size: 0.9rem;
   color: var(--muted);
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.skills-grid h4 {
+  margin-bottom: 0.75rem;
+  color: var(--primary-dark);
 }
 
 .skills-grid ul {
@@ -83,22 +105,27 @@ h2 {
 }
 
 .skills-grid li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.45rem;
 }
 
-#contact a {
-  color: var(--purple);
-  font-weight: 500;
+.contact-links {
+  font-size: 1.05rem;
+}
+
+.contact-links a {
+  color: var(--primary-dark);
   text-decoration: none;
+  font-weight: 500;
 }
 
-#contact a:hover {
+.contact-links a:hover {
   text-decoration: underline;
 }
 
 footer {
+  border-top: 1px solid var(--border);
   text-align: center;
   padding: 2rem;
-  color: var(--muted);
   font-size: 0.9rem;
+  color: var(--muted);
 }
