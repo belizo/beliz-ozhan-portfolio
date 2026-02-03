@@ -10,3 +10,16 @@
   color: white;
   font-weight: 500;
 }
+
+:root {
+  --primary: #8b7cf6;        /* soft professional purple */
+  --primary-soft: #f5f3ff;   /* background tint */
+  --primary-muted: #c7c1f3;
+  --primary-dark: #5b50c8;
+
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+
+  --border-light: #e6e7eb;
+  --surface: #ffffff;
+}
