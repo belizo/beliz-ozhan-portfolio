@@ -23,3 +23,47 @@
   --border-light: #e6e7eb;
   --surface: #ffffff;
 }
+
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-muted)
+  );
+  color: white;
+}
+
+
+header {
+  background: var(--primary);
+}
+
+.project {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
+  padding: 2.2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+}
+
+h2 {
+  border-bottom: 2px solid var(--primary-soft);
+  padding-bottom: 0.4rem;
+  margin-top: 3rem;
+}
+a {
+  color: var(--primary-dark);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
