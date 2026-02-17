@@ -193,3 +193,55 @@ footer {
 a { color: var(--primary-dark); transition: color 0.2s; }
 ul { padding-left: 1.2rem; }
 li { margin-bottom: 0.5rem; }
+
+
+/* ---------- Site Header Layout ---------- */
+
+.site-header {
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  color: white;
+}
+
+/* centers everything */
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* name/logo */
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+/* nav list reset */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* nav links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
