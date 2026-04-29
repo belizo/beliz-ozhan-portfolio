@@ -1,3 +1,4 @@
+/* ---------- Design Tokens ---------- */
 :root {
   --primary: #7b6cf6;
   --primary-soft: #f4f2ff;
@@ -14,43 +15,210 @@
   --radius-md: 12px;
 }
 
+/* ---------- Global ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-main);
   background: var(--primary-soft);
 }
 
+/* ---------- Layout & Container ---------- */
 main {
   max-width: 820px;
   margin: auto;
   padding: 4rem 1.5rem;
 }
 
-h2 {
-  border-bottom: 2px solid var(--primary-muted);
-  padding-bottom: 0.5rem;
+section {
+  margin-bottom: 5rem;
 }
 
-.project {
-  background: white;
-  padding: 2rem;
-  border-radius: 20px;
-  margin-bottom: 2rem;
-}
-
-.impact {
-  color: var(--primary-dark);
+/* ---------- Typography ---------- */
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
   font-weight: 500;
+  letter-spacing: -0.4px;
 }
 
-.section-white {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
+h1 { font-size: 3rem; margin: 0; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.5rem; }
+
+/* ---------- Header & Navigation ---------- */
+header {
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  color: white;
 }
 
-.section-purple {
-  background: var(--primary-soft);
-  padding: 2rem;
-  border-radius: 12px;
+.header-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.site-nav, .project-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.site-nav a, .project-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.site-nav a:hover, .project-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Specific Style for "Back" Link in Subfolders */
+.back-link {
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Project Cards (Home Page) ---------- */
+.project {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Case Study Content (Project Pages) ---------- */
+.project-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.project-figure {
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.project-figure img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.project-figure figcaption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+.cta-button:hover {
+  background: var(--primary-dark);
+  text-decoration: none;
+}
+
+.project-footer-cta {
+  margin-top: 6rem;
+  text-align: center;
+  padding-top: 4rem;
+  border-top: 1px solid var(--border-light);
+}
+
+footer {
+  text-align: center;
+  padding: 4rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Utilities ---------- */
+a { color: var(--primary-dark); transition: color 0.2s; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.5rem; }
+
+
+/* ---------- Site Header Layout ---------- */
+
+.site-header {
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  color: white;
+}
+
+/* centers everything */
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* name/logo */
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+/* nav list reset */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* nav links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
